@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservación</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="icon" type="image/x-icon" href="imgs/logo.png">
+</head>
+<body>
+    <section class="Bnbair">
+        <header>
+            <!-- Upper part of the header -->
+            <div class="upper">
+            <!-- Title -->
+            <div class="title">
+              <img src="imgs/logo.png" alt="">
+              <h1>Bnbair</h1>
+            </div>
+            <!-- Option bar button -->
+            <div class="options">
+              <button class="button-17" role="button"><img src="imgs/descarga.jpeg" alt=""><img src="imgs/profile-icon-9.png" alt=""></button>
+            </div>
+            </div>
+        </header>
+
+        <div class="section-center">
+            <div id="reservacion-detalles"></div>
+        </div>
+        <footer>
+    </section>
+
+    <script>
+        function displayReservacionDetalles() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const noches = urlParams.get('noches');
+            const precioFinal = urlParams.get('precioFinal');
+
+            const detallesContainer = document.getElementById('reservacion-detalles');
+            detallesContainer.innerHTML = `
+
+            
+
+
+
+
+
+                <div class="resbox">
+        <div class="shadowbx">
+            <h4>Detalles de la Reservación</h4>
+            <p>Número de noches: ${noches}</p>
+            <p>Precio Final: $${precioFinal}</p>
+            <button id="realizar-compra">Realizar Compra</button>
+
+        </div>
+
+
+        </div>
+
+            `;
+
+            const realizarCompraBtn = document.getElementById('realizar-compra');
+            realizarCompraBtn.addEventListener('click', function() {
+                // Aquí puedes agregar la lógica para completar la compra
+                alert('Compra realizada con éxito');
+            });
+        }
+
+        displayReservacionDetalles();
+        const stripe = Stripe('tu_clave_de_prueba_aquí');
+        reservarButton.addEventListener('click', async (e) => {
+  e.preventDefault();
+  const noches = parseInt(counterElement.innerText);
+  const precioFinal = parseFloat(precioFinalElement.innerText.replace('Precio Final: $', ''));
+
+  // Crea el objeto para el pago
+  const lineItems = [
+    {
+      price_data: {
+        currency: 'mxn', // Cambia si es necesario
+        product_data: {
+          name: 'Reservación de alojamiento',
+        },
+        unit_amount: precioFinal * 100, // Stripe maneja los montos en centavos
+      },
+      quantity: noches,
+    },
+  ];
+
+  // Llama a la función para abrir el formulario de pago
+  openPaymentForm(lineItems);
+});
+async function openPaymentForm(lineItems) {
+  const { error } = await stripe.redirectToCheckout({
+    mode: 'payment',
+    lineItems,
+    successUrl: 'https://your-website.com/success', // Reemplaza con tu URL de éxito
+    cancelUrl: 'https://your-website.com/cancel', // Reemplaza con tu URL de cancelación
+  });
+
+  if (error) {
+    console.error('Error al abrir el formulario de pago:', error);
+  }
+}
+    </script>
+    <script src="https://js.stripe.com/v3/"></script>
+</body>
+</html>

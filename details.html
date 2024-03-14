@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Details</title>
+  <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="icon" type="image/x-icon" href="imgs/logo.png">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__container-top">
+        <div class="title">
+          <img src="imgs/logo.png" alt="">
+          <h1>Bnbair</h1>
+        </div>
+
+        <div class="options">
+          <button class="button-17" role="button"><img src="imgs/descarga.jpeg" alt=""><img
+              src="imgs/profile-icon-9.png" alt=""></button>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+  </header>
+
+  <div class="section-center">
+    <div id="item-details"></div>
+  </div>
+  <footer>
+    </section>
+
+    <script>
+      function displayItemDetails(item) {
+        const detailsContainer = document.getElementById('item-details');
+        detailsContainer.innerHTML = `
+<div class="maincont">
+  <h4 class="utitle">${item.ubicacion} </h4>
+
+            <div class="containerelements">
+                <div class="char-imgs-main">
+                  <img src="${item.img}" alt="${item.ubicacion}" class="main-img">
+                </div>
+                <div class="char-imgs-rest">
+                  <img src="${item.img2}" alt="${item.ubicacion}" class="side-img">
+                  <img src="${item.img3}" alt="${item.ubicacion}" class="side-img">
+                  <img src="${item.img4}" alt="${item.ubicacion}" class="side-img">
+                  <img src="${item.img5}" alt="${item.ubicacion}" class="side-img">
+                </div>
+                  </div>
+
+            <div class="descripcion">
+                <div class="item-details">
+                  <div class="itembx">
+                        <h4 class="ubicacion">${item.ubicacion}</h4> 
+                        <h4 class="distancia">${item.distancia} ˚ ${item.fecha} </h4> 
+                        <h4 class="descripcion">☆${item.calificacion}</h4> 
+                        <h4 class="descripcion">${item.desc}</h4> 
+                        </div>
+                </div>
+
+                <div class="compra">
+                  <div class="shadowbx">
+                    <h4 class="precio">${item.precio}</h4>
+                    <div class="noches">
+                        <button class="decrease">-</button>
+                        <div class="counter">1</div>
+                        <button class="increase">+</button>
+                    </div>
+                    <h4 class="precio-final">Precio Final: $<span id="precio-final"></span></h4>
+                    <button class="reservar">Reservar</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+            `;
+
+        const precioElement = document.getElementById('precio');
+        const counterElement = document.querySelector('.counter');
+        const precioFinalElement = document.getElementById('precio-final');
+        const decreaseButton = document.querySelector('.decrease');
+        const increaseButton = document.querySelector('.increase');
+        const reservarButton = document.querySelector('.reservar');
+
+        let precio = filtrarPrecio(item.precio);
+        let noches = parseInt(counterElement.innerText);
+
+        function updatePrecioFinal() {
+          precioFinalElement.innerText = (precio * noches).toFixed(2);
+        }
+
+        decreaseButton.addEventListener('click', function () {
+          if (noches > 1) {
+            noches--;
+            counterElement.innerText = noches;
+            updatePrecioFinal();
+          }
+        });
+
+        increaseButton.addEventListener('click', function () {
+          noches++;
+          counterElement.innerText = noches;
+          updatePrecioFinal();
+        });
+
+        function filtrarPrecio(precioString) {
+          let precioLimpio = precioString.replace('$', '').replace(' MXN noche', '');
+          precioLimpio = precioLimpio.replace(',', '');
+          let precioNumerico = parseFloat(precioLimpio);
+          return precioNumerico;
+        }
+
+        reservarButton.addEventListener('click', function () {
+          const noches = parseInt(counterElement.innerText);
+          const precioFinal = parseFloat(precioFinalElement.innerText.replace('Precio Final: $', ''));
+          const url = `reservacion.html?noches=${noches}&precioFinal=${precioFinal}`;
+          window.location.href = url;
+        });
+      }
+
+      const itemData = JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
+      displayItemDetails(itemData);
+    </script>
+</body>
+
+</html>

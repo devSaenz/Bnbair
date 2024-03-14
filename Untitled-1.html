@@ -1,0 +1,49 @@
+
+
+
+
+<div class="container">
+    <div class="char-imgs-main">
+      <img src="${item.img}" alt="${item.ubicacion}" class="main-img">
+    </div>
+    <div class="char-imgs-rest">
+      <img src="${item.img2}" alt="${item.ubicacion}" class="side-img">
+      <img src="${item.img3}" alt="${item.ubicacion}" class="side-img">
+      <img src="${item.img4}" alt="${item.ubicacion}" class="side-img">
+      <img src="${item.img5}" alt="${item.ubicacion}" class="side-img">
+    </div>
+  </div>
+
+<div class="item-info">
+    <h4 class="ubicacion">${item.ubicacion} <span class="number">☆${item.calificacion}</span></h4>
+    <h5 class="distancia">${item.distancia}</h5>
+    <h5 class="fecha">${item.fecha}</h5>
+</div>
+
+
+<div class="compra">
+    <h4 class="precio">${item.precio}</h4>
+    <!-- AGREGAR BOTON Y FUNCIONALIDAD DE CUANTAS NOCHES SE QUIERE QUEDAR MOSTRAR PRECIO FINAL PRECIO * NOCHE -->
+    <div class="noches">
+        <button class="decrease">-</button>
+        <div class="counter"></div>
+        <button class="increase">+</button>
+    </div> 
+
+    
+</div>
+
+<div class="compra">
+    <h4 class="precio">Precio: $<span id="precio">${item.precio}</span></h4>
+    <div class="noches">
+        <button class="decrease">-</button>
+        <div class="counter">1</div>
+        <button class="increase">+</button>
+    </div>
+ <h4 class="precio-final">Precio Final: $<span id="precio-final">100</span></h4>
+
+
+
+
+
+</div>
