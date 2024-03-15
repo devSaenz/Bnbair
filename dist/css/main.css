@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Estilos generales */
 * {
   box-sizing: border-box;
@@ -227,7 +228,7 @@ img {
 /* Estilos responsivos */
 .photo {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 300px;
   border-radius: 10px;
@@ -271,7 +272,7 @@ img {
   grid-auto-rows: minmax(2, 1fr);
   border-radius: 15px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   overflow: hidden;
   height: 400px;
 }
@@ -294,7 +295,7 @@ img {
   height: 200px;
   width: 100%;
   -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
 }
 
 /* Estilos para la sección de descripción */
@@ -315,11 +316,12 @@ img {
   width: auto;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
 }
 
 .utitle {
+  padding-top: 2%;
   font-size: 24px;
   font-weight: bold;
   color: #333;
@@ -418,17 +420,78 @@ img {
 .precio-final {
   padding-top: 5%;
   padding-bottom: 5%;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
 
 
 footer {
   border-top: 2px solid rgb(231, 229, 229);
-  background-color: #fcfcfcad;
+  background-color: #f0f0f0;
   align-items: center;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 10px;
   color: rgb(102, 102, 102);
-  font:Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
-  font-weight: 400 
+  font: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+  font-weight: 400;
+}
+
+footer p {
+  display: inline;
+  /* This makes the paragraph display inline */
+  margin-right: 10px;
+  /* Add margin to the right to create space */
+  padding-right: 100px;
+}
+
+footer .companies {
+  display: inline;
+  /* This makes the div display inline */
+}
+
+footer .companies img {
+  vertical-align: middle;
+  /* Align images vertically in the middle */
+  margin-left: 10px;
+  /* Add margin to the left of each image */
+  width: 25px;
+  height: 25px;
+}
+
+.siteinfo {
+  overflow: hidden;
+  /* Clear floats */
+  background-color: #f0f0f0;
+
+}
+
+#asistenia,
+#anfitrion,
+#airbnb {
+  float: left;
+  width: calc(100% / 3);
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+#asistenia ul{
+  list-style-type: none;
+  padding-left: 60%;
+}
+#anfitrion ul{
+  list-style-type: none;
+  padding: 0;
+  padding-left: 20%;
+
+}
+#airbnb ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#asistenia li,
+#anfitrion li,
+#airbnb li {
+  margin-bottom: 10px;
 }
