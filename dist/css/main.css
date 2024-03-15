@@ -422,16 +422,15 @@ img {
   padding-bottom: 5%;
 }
 
-/*# sourceMappingURL=main.css.map */
-
+/* Estilos para el footer */
 
 footer {
-  border-top: 2px solid rgb(231, 229, 229);
-  background-color: #f0f0f0;
+  border-top: 2px solid #dddddd;
+  background-color: #f7f7f7;
   align-items: center;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: rgb(102, 102, 102);
   font: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
   font-weight: 400;
@@ -462,17 +461,19 @@ footer .companies img {
 .siteinfo {
   overflow: hidden;
   /* Clear floats */
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
 
 }
 
 #asistenia,
 #anfitrion,
 #airbnb {
+  border-top: 2px solid #dddddd;
   float: left;
   width: calc(100% / 3);
   box-sizing: border-box;
   padding: 20px;
+  padding-top: 40px;
 }
 
 #asistenia ul{
@@ -494,4 +495,33 @@ footer .companies img {
 #anfitrion li,
 #airbnb li {
   margin-bottom: 10px;
+}
+.grid-container{
+  padding-inline: 20%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-gap: 30px;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 30px;
+    border-top: 2px solid #dddddd;
+}
+.grid-item{
+  text-align:justify ; 
+}
+
+.estadia{
+  color: #b3b3b3;
+}
+
+.horizontal-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.horizontal-list li {
+  margin-right: 10px;
 }
