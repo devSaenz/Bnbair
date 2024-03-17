@@ -200,11 +200,27 @@
                 <div class="item-details">
                   <div class="itembx">
                         <h4 class="ubicacion">${item.ubicacion}</h4>
-                        <p class="ubidesc">${item.huespedes} · ${item.habitaciones} · ${item.camas} · ${item.banos} </p>
-                        <h4 class="distancia">${item.distancia} ˚ ${item.fecha} </h4> 
-                        <h4 class="descripcion">☆${item.calificacion}</h4> 
-                        <h4 class="descripcion">${item.desc}</h4> 
-                        </div>
+                        <p class="distancia">${item.huespedes} huéspedes · ${item.habitaciones} habitación · ${item.camas} camas · ${item.banos} baño</p>
+                        <h4 class="descripcion">☆${item.calificacion} · ${item.evaluaciones} evaluaciones</h4> 
+                        <div class="anfitrion"><p>Anfitrión: ${item.anfitrion}</p></div>
+                        <h4 class="experiencia"> ${item.experiencia} · ${item.tiempo}</h4>
+                        <div class="caracteristicas">
+                          <div class="car1">
+                            <h3>${item.dato1.nombre}</h3>
+                            <h4>${item.dato1.descripcion}</h4>
+                          </div>
+                          <div class="car2">
+                            <h3>${item.dato2.nombre}</h3>
+                            <h4>${item.dato2.descripcion}</h4>
+                          </div>
+                          <div class="car3">
+                            <h3>${item.dato3.nombre}</h3>
+                            <h4>${item.dato3.descripcion}</h4>
+                          </div>
+                          </div>
+                          <h4 class="descripcion">${item.desc}</h4> 
+
+                    </div>
                 </div>
 
                 <div class="compra">
@@ -219,6 +235,8 @@
                     <button class="reservar">Reservar</button>
                   </div>
                 </div>
+              </div>
+
             </div>
           </div>
             `;

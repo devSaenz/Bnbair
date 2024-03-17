@@ -28,7 +28,10 @@ const locations = [
     habitaciones: 3,
     camas: 4,
     banos: 2,
-    anfitrion: "Gabriela Martinez"
+    anfitrion: "Gabriela Martinez",
+    experiencia: "Superanfitrión",
+    tiempo : 11,
+    evaluaciones: 221
   },
   {
     id: 2,
@@ -56,6 +59,8 @@ const locations = [
     camas: 3,
     banos: 1,
     anfitrion: "Sofía López",
+    experiencia: "Superanfitrión",
+    tiempo : 8,
     evaluaciones: 321
   },
   {
@@ -84,6 +89,8 @@ const locations = [
     camas: 1,
     banos: 1,
     anfitrion: "Alejandro García",
+    experiencia: "anfitrion",
+    tiempo : 5,
     evaluaciones: 123
   },
   {
@@ -112,6 +119,8 @@ const locations = [
     camas: 3,
     banos: 2,
     anfitrion: "Roberto González",
+    experiencia: "Superanfitrión",
+    tiempo : 7,
     evaluaciones: 234
   },
   {
@@ -140,6 +149,8 @@ const locations = [
     camas: 2,
     banos: 1,
     anfitrion: "María Fernández",
+    experiencia: "Superanfitrión",
+    tiempo : 6,
     evaluaciones: 345
   },
   {
@@ -168,6 +179,8 @@ const locations = [
     camas: 3,
     banos: 1,
     anfitrion: "Carlos Pérez",
+    experiencia: "anfitrion",
+    tiempo : 4,
     evaluaciones: 456
   },
   {
@@ -196,6 +209,8 @@ const locations = [
     camas: 6,
     banos: 4,
     anfitrion: "Roberto Hernández",
+    experiencia: "iniciando",
+    tiempo : 2,
     evaluaciones: 567
   },
   {
@@ -224,6 +239,8 @@ const locations = [
     camas: 3,
     banos: 2,
     anfitrion: "María Rodríguez",
+    experiencia: "Superanfitrión",
+    tiempo : 3,
     evaluaciones: 678
   },
   {
@@ -252,6 +269,8 @@ const locations = [
     camas: 2,
     banos: 1,
     anfitrion: "Carlos García",
+    experiencia: "Superanfitrión",
+    tiempo : 9,
     evaluaciones: 789
   },
   {
@@ -280,6 +299,8 @@ const locations = [
     camas: 2,
     banos: 1,
     anfitrion: "Carlos Sánchez",
+    experiencia: "anfitrion",
+    tiempo : 10,
     evaluaciones: 890
   }
   
