@@ -55,7 +55,8 @@ const locations = [
     habitaciones: 2,
     camas: 3,
     banos: 1,
-    anfitrion: "Sofía López"
+    anfitrion: "Sofía López",
+    evaluaciones: 321
   },
   {
     id: 3,
@@ -82,7 +83,8 @@ const locations = [
     habitaciones: 1,
     camas: 1,
     banos: 1,
-    anfitrion: "Alejandro García"
+    anfitrion: "Alejandro García",
+    evaluaciones: 123
   },
   {
     id: 4,
@@ -109,7 +111,8 @@ const locations = [
     habitaciones: 2,
     camas: 3,
     banos: 2,
-    anfitrion: "Roberto González"
+    anfitrion: "Roberto González",
+    evaluaciones: 234
   },
   {
     id: 5,
@@ -136,7 +139,8 @@ const locations = [
     habitaciones: 1,
     camas: 2,
     banos: 1,
-    anfitrion: "María Fernández"
+    anfitrion: "María Fernández",
+    evaluaciones: 345
   },
   {
     id: 6,
@@ -163,7 +167,8 @@ const locations = [
     habitaciones: 2,
     camas: 3,
     banos: 1,
-    anfitrion: "Carlos Pérez"
+    anfitrion: "Carlos Pérez",
+    evaluaciones: 456
   },
   {
     id: 7,
@@ -190,7 +195,8 @@ const locations = [
     habitaciones: 4,
     camas: 6,
     banos: 4,
-    anfitrion: "Roberto Hernández"
+    anfitrion: "Roberto Hernández",
+    evaluaciones: 567
   },
   {
     id: 8,
@@ -217,7 +223,8 @@ const locations = [
     habitaciones: 2,
     camas: 3,
     banos: 2,
-    anfitrion: "María Rodríguez"
+    anfitrion: "María Rodríguez",
+    evaluaciones: 678
   },
   {
     id: 9,
@@ -244,7 +251,8 @@ const locations = [
     habitaciones: 1,
     camas: 2,
     banos: 1,
-    anfitrion: "Carlos García"
+    anfitrion: "Carlos García",
+    evaluaciones: 789
   },
   {
     id: 10,
@@ -271,7 +279,8 @@ const locations = [
     habitaciones: 1,
     camas: 2,
     banos: 1,
-    anfitrion: "Carlos Sánchez"
+    anfitrion: "Carlos Sánchez",
+    evaluaciones: 890
   }
   
 ];

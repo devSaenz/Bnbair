@@ -181,7 +181,7 @@
     function displayItemDetails(item) {
       const detailsContainer = document.getElementById('item-details');
       detailsContainer.innerHTML = `
-<div class="maincont">
+      <div class="maincont">
   <h4 class="utitle">${item.ubicacion} </h4>
 
             <div class="containerelements">
@@ -199,7 +199,8 @@
             <div class="descripcion">
                 <div class="item-details">
                   <div class="itembx">
-                        <h4 class="ubicacion">${item.ubicacion}</h4> 
+                        <h4 class="ubicacion">${item.ubicacion}</h4>
+                        <p class="ubidesc">${item.huespedes} · ${item.habitaciones} · ${item.camas} · ${item.banos} </p>
                         <h4 class="distancia">${item.distancia} ˚ ${item.fecha} </h4> 
                         <h4 class="descripcion">☆${item.calificacion}</h4> 
                         <h4 class="descripcion">${item.desc}</h4> 
