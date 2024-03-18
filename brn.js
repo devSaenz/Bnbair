@@ -310,6 +310,7 @@ const locations = [
   const sectionCenter = document.querySelector(".section-center");
   const elements = document.querySelector('location-item');
   const header = document.querySelector('header');
+  const btn = document.querySelector('.button-17');
 
   window.addEventListener("DOMContentLoaded", function () {
     diplayLocationsItems(locations);
@@ -352,7 +353,9 @@ window.addEventListener('scroll', function () {
   header.classList.toggle('sticky', window.scrollY > 0);
 });
 
+btn.addEventListener('click', function () {
 
+})
 
 
 
