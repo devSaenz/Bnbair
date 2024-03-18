@@ -262,6 +262,7 @@
       const decreaseButton = document.querySelector('.decrease');
       const increaseButton = document.querySelector('.increase');
       const reservarButton = document.querySelector('.reservar');
+      const shadowboxel = document.querySelector('.shadowbx');
 
       let precio = filtrarPrecio(item.precio);
       let noches = parseInt(counterElement.innerText);
@@ -301,6 +302,26 @@
 
     const itemData = JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
     displayItemDetails(itemData);
+
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+      header.classList.toggle('sticky', window.scrollY > 0);
+    });
+
+
+    // window.addEventListener('scroll', function () {
+    //   const shadowboxel = document.querySelector('.shadowbx');
+    //   const footer = document.querySelector('footer');
+    //   const shadowboxTop = shadowboxel.offsetTop;
+    //   const footerTop = footer.offsetTop;
+
+    //   if (window.scrollY > shadowboxTop && window.scrollY < footerTop) {
+    //     shadowboxel.classList.add('stickybx');
+    //   } else {
+    //     shadowboxel.classList.remove('stickybx');
+    //   }
+    // });
+
   </script>
 </body>
 
