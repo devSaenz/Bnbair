@@ -304,6 +304,8 @@ img {
     padding-top: 3%;
     color: black;
     text-align: justify;
+    padding-right: 20%;
+
 }
 
 .item-details {
@@ -527,4 +529,14 @@ footer .companies img {
 h3 {
   padding-inline-start: 20%;
   padding-top: 30px;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #dddddd;
 }

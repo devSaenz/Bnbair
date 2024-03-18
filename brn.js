@@ -309,7 +309,7 @@ const locations = [
 
   const sectionCenter = document.querySelector(".section-center");
   const elements = document.querySelector('location-item');
-
+  const header = document.querySelector('header');
 
   window.addEventListener("DOMContentLoaded", function () {
     diplayLocationsItems(locations);
@@ -347,7 +347,10 @@ function handleItemClick(itemId) {
     window.location.href = `details.html#${itemDataEncoded}`;
 }
 
-
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  header.classList.toggle('sticky', window.scrollY > 0);
+});
 
 
 
