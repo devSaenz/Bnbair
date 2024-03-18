@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Estilos generales */
 * {
   box-sizing: border-box;
@@ -227,7 +228,7 @@ img {
 /* Estilos responsivos */
 .photo {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 300px;
   border-radius: 10px;
@@ -271,7 +272,7 @@ img {
   grid-auto-rows: minmax(2, 1fr);
   border-radius: 15px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   overflow: hidden;
   height: 400px;
 }
@@ -294,32 +295,32 @@ img {
   height: 200px;
   width: 100%;
   -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
 }
 
 /* Estilos para la sección de descripción */
 .descripcion {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6rem;
-  padding-top: 3%;
-  color: black;
-  text-align: justify;
+    display: grid;
+    padding-top: 3%;
+    color: black;
+    text-align: justify;
+    padding-right: 20%;
+
 }
 
 .item-details {
+  grid-column: 1/2; /* Occupies the first column of the grid */
   flex: 0 0 50%;
-  max-width: 50%;
+  max-width: 100%;
   width: auto;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
 }
 
 .utitle {
+  padding-top: 2%;
   font-size: 24px;
   font-weight: bold;
   color: #333;
@@ -329,8 +330,11 @@ img {
 }
 
 .compra {
+  display: grid;
   align-items: center;
   justify-content: center;
+  grid-column: 2/3; /* Occupies the second column of the grid */
+  align-content: space-between;
 }
 
 .itembx {
@@ -338,14 +342,10 @@ img {
 }
 
 .itembx .ubicacion {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   font-size: 23px;
 }
 
 .itembx .distancia {
-  display: flex;
   justify-content: space-between;
   align-items: baseline;
   color: #8c8c8c;
@@ -358,12 +358,8 @@ img {
   box-shadow: 0 0 10px rgba(134, 134, 134, 0.6);
   border-radius: 10px;
   width: 350px;
-  margin: 30px 0 30px 60px;
   padding: 10px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  }
 
 .shadowbx .precio {
   align-items: left;
@@ -418,4 +414,129 @@ img {
 .precio-final {
   padding-top: 5%;
   padding-bottom: 5%;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* Estilos para el footer */
+
+footer {
+  border-top: 2px solid #dddddd;
+  background-color: #f7f7f7;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(102, 102, 102);
+  font: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+  font-weight: 400;
+}
+
+footer p {
+  display: inline;
+  /* This makes the paragraph display inline */
+  margin-right: 10px;
+  /* Add margin to the right to create space */
+  padding-right: 100px;
+}
+
+footer .companies {
+  display: inline;
+  /* This makes the div display inline */
+}
+
+footer .companies img {
+  vertical-align: middle;
+  /* Align images vertically in the middle */
+  margin-left: 10px;
+  /* Add margin to the left of each image */
+  width: 25px;
+  height: 25px;
+}
+
+.siteinfo {
+  overflow: hidden;
+  /* Clear floats */
+  background-color: #f7f7f7;
+
+}
+
+#asistenia,
+#anfitrion,
+#airbnb {
+  border-top: 2px solid #dddddd;
+  float: left;
+  width: calc(100% / 3);
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 40px;
+}
+
+#asistenia ul {
+  list-style-type: none;
+  padding-left: 60%;
+}
+
+#anfitrion ul {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 20%;
+
+}
+
+#airbnb ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#asistenia li,
+#anfitrion li,
+#airbnb li {
+  margin-bottom: 10px;
+}
+
+.grid-container {
+  padding-inline: 20%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 30px;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  border-top: 2px solid #dddddd;
+}
+
+.grid-item {
+  text-align: justify;
+}
+
+.estadia {
+  color: #b3b3b3;
+}
+
+.horizontal-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  padding-inline: 20%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.horizontal-list li {
+  margin-right: 25px;
+}
+
+h3 {
+  padding-inline-start: 20%;
+  padding-top: 30px;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #dddddd;
+}
