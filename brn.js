@@ -344,7 +344,7 @@ const searchInput = document.querySelector("[data-search]");
 function handleItemClick(itemId) {
     const item = locations.find(loc => loc.id === itemId);
     const itemDataEncoded = encodeURIComponent(JSON.stringify(item));
-    window.location.href = `details.html#${itemDataEncoded}`;
+    window.location.href = `/views/details.html#${itemDataEncoded}`;
 }
 
 window.addEventListener('scroll', function () {
