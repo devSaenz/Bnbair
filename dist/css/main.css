@@ -276,15 +276,16 @@ img {
 
 /* Estilos para la sección de descripción */
 .descripcion {
-    display: grid;
-    padding-top: 3%;
-    color: black;
-    text-align: justify;
-    gap:  50px;
+  display: grid;
+  padding-top: 3%;
+  color: black;
+  text-align: justify;
+  gap: 50px;
 }
 
 .item-details {
-  grid-column: 1/2; /* Occupies the first column of the grid */
+  grid-column: 1/2;
+  /* Occupies the first column of the grid */
   flex: 0 0 50%;
   max-width: 100%;
   width: auto;
@@ -308,7 +309,8 @@ img {
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-column: 2/3; /* Occupies the second column of the grid */
+  grid-column: 2/3;
+  /* Occupies the second column of the grid */
   align-content: space-between;
 }
 
@@ -334,7 +336,7 @@ img {
   border-radius: 10px;
   width: 350px;
   padding: 10px;
-  }
+}
 
 .shadowbx .precio {
   align-items: left;
@@ -555,8 +557,8 @@ h3 {
 }
 
 .srchbar:hover {
-    background: #f6f9fe;
-    color: #174ea6;
+  background: #f6f9fe;
+  color: #174ea6;
 }
 
 .srchbar {
@@ -564,37 +566,79 @@ h3 {
   outline: none;
 }
 
-.impinfo{
+.impinfo {
   padding-top: 0px;
   padding-bottom: 30px;
   border-bottom: 2px solid #dddddd;
 }
 
-.anfitrion{
+.anfi {
+  display: flex;
   padding-top: 25px;
   padding-bottom: 25px;
   border-bottom: 2px solid #dddddd;
 }
 
-.anfitrion h5 {
+.anfi h5 {
   color: gray;
 }
 
-.caracteristicas{
+.caracteristicas {
+  padding-top: 25px;
   padding-bottom: 25px;
   border-bottom: 2px solid #dddddd;
 }
-.caracteristicas h3{
+
+.caracteristicas h3 {
   padding-inline-start: 0px;
 }
 
-.caracteristicas h4{
+.caracteristicas h4 {
   padding-inline-start: 0px;
   color: #717171;
 }
 
-.informacionimp{
+.informacionimp {
   padding-top: 25px;
   padding-bottom: 25px;
   border-bottom: 2px solid #dddddd;
+}
+
+.anfitrionimg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.anfitrioninfo h4 {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.car1{
+  display: flex;
+}
+
+.car2{
+  display: flex;
+}
+.car3{
+  display: flex;
+}
+
+.carimg{
+  width: 40px;
+  height: 40px;
+}
+
+.cdatos{
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+.cdatos h3{
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
 }
