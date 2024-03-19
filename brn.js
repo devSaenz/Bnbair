@@ -23,7 +23,7 @@ const locations = [
     dato3: {
       nombre: "Servicio excepcional",
       descripcion: "Los huéspedes elogian el servicio amable y atento del personal."
-    },
+    },      
     huespedes: 6,
     habitaciones: 3,
     camas: 4,
@@ -31,7 +31,8 @@ const locations = [
     anfitrion: "Gabriela Martinez",
     experiencia: "Superanfitrión",
     tiempo : 11,
-    evaluaciones: 221
+    evaluaciones: 221,    
+    hostimg: "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg",
   },
   {
     id: 2,
@@ -61,7 +62,8 @@ const locations = [
     anfitrion: "Sofía López",
     experiencia: "Superanfitrión",
     tiempo : 8,
-    evaluaciones: 321
+    evaluaciones: 321,
+    hostimg: "https://media.istockphoto.com/id/1251073457/photo/happy-asian-young-woman-smiling-against-made-finger-thumbs-up-ok-gesture-on-blue-background.jpg?s=612x612&w=0&k=20&c=8TCpJv6hG4cetSASJd7huNY31EL8dctusd8jICLDWyw="
   },
   {
     id: 3,
@@ -91,7 +93,8 @@ const locations = [
     anfitrion: "Alejandro García",
     experiencia: "anfitrion",
     tiempo : 5,
-    evaluaciones: 123
+    evaluaciones: 123,
+    hostimg: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   },
   {
     id: 4,
@@ -121,7 +124,8 @@ const locations = [
     anfitrion: "Roberto González",
     experiencia: "Superanfitrión",
     tiempo : 7,
-    evaluaciones: 234
+    evaluaciones: 234,
+    hostimg: "https://st3.depositphotos.com/1017228/18878/i/450/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg"
   },
   {
     id: 5,
@@ -151,7 +155,9 @@ const locations = [
     anfitrion: "María Fernández",
     experiencia: "Superanfitrión",
     tiempo : 6,
-    evaluaciones: 345
+    evaluaciones: 345,
+    hostimg: "https://img.freepik.com/free-photo/portrait-dark-skinned-cheerful-woman-with-curly-hair-touches-chin-gently-laughs-happily-enjoys-day-off-feels-happy-enthusiastic-hears-something-positive-wears-casual-blue-turtleneck_273609-43443.jpg"
+
   },
   {
     id: 6,
@@ -181,7 +187,8 @@ const locations = [
     anfitrion: "Carlos Pérez",
     experiencia: "anfitrion",
     tiempo : 4,
-    evaluaciones: 456
+    evaluaciones: 456,
+    hostimg:"https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
   },
   {
     id: 7,
@@ -211,7 +218,8 @@ const locations = [
     anfitrion: "Roberto Hernández",
     experiencia: "iniciando",
     tiempo : 2,
-    evaluaciones: 567
+    evaluaciones: 567,
+    hostimg:"https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg"
   },
   {
     id: 8,
@@ -241,7 +249,8 @@ const locations = [
     anfitrion: "María Rodríguez",
     experiencia: "Superanfitrión",
     tiempo : 3,
-    evaluaciones: 678
+    evaluaciones: 678,
+    hostimg:"https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   },
   {
     id: 9,
@@ -271,7 +280,8 @@ const locations = [
     anfitrion: "Carlos García",
     experiencia: "Superanfitrión",
     tiempo : 9,
-    evaluaciones: 789
+    evaluaciones: 789,
+    hostimg:"https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   },
   {
     id: 10,
@@ -301,7 +311,8 @@ const locations = [
     anfitrion: "Carlos Sánchez",
     experiencia: "anfitrion",
     tiempo : 10,
-    evaluaciones: 890
+    evaluaciones: 890,
+    hostimg:"https://photo-cdn2.icons8.com/jlMWP0ww289yUPUet6BneIhb0FpBlion9RTTy0AcbXw/rs:fit:193:290/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5h/c3NldHMvYXNzZXRz/L3NhdGEvb3JpZ2lu/YWwvMzA5L2U1Mjcx/NjU5LTM1NmMtNGRh/Yi1hODQzLWVkMWRm/M2EyNjcwMS5qcGc.jpg"
   }
   
 ];
@@ -310,6 +321,7 @@ const locations = [
   const sectionCenter = document.querySelector(".section-center");
   const elements = document.querySelector('location-item');
   const header = document.querySelector('header');
+  const btn = document.querySelector('.button-17');
 
   window.addEventListener("DOMContentLoaded", function () {
     diplayLocationsItems(locations);
@@ -352,7 +364,9 @@ window.addEventListener('scroll', function () {
   header.classList.toggle('sticky', window.scrollY > 0);
 });
 
+btn.addEventListener('click', function () {
 
+})
 
 
 

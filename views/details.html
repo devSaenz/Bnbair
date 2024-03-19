@@ -13,14 +13,16 @@
     <header class="header">
       <div class="header__container container">
         <div class="header__container-top">
-          <div class="title">
-            <img src="imgs/logo.png" alt="">
-            <h1>Bnbair</h1>
-          </div>
+          <a href="index.html">
+            <div class="title">
+              <img src="../imgs/logo.png" alt="">
+              <h1>Bnbair</h1>
+            </div>
+          </a>
 
           <div class="options">
-            <button class="button-17" role="button"><img src="imgs/descarga.jpeg" alt=""><img
-                src="imgs/profile-icon-9.png" alt=""></button>
+            <button class="button-17" role="button"><img src="../imgs/descarga.jpeg" alt=""><img
+                src="../imgs/profile-icon-9.png" alt=""></button>
           </div>
         </div>
 
@@ -179,6 +181,7 @@
 
     <script>
       function displayItemDetails(item) {
+        console.log(item);
         const detailsContainer = document.getElementById('item-details');
         detailsContainer.innerHTML = `
       <div class="maincont">
@@ -201,24 +204,39 @@
                   <div class="itembx">
                         <h4 class="ubicacion">${item.ubicacion}</h4>
                         <p class="distancia">${item.huespedes} huéspedes · ${item.habitaciones} habitación · ${item.camas} camas · ${item.banos} baño</p>
-                        <h4 class="descripcion">☆${item.calificacion} · ${item.evaluaciones} evaluaciones</h4> 
-                        <div class="anfitrion"><p>Anfitrión: ${item.anfitrion}</p></div>
-                        <h4 class="experiencia"> ${item.experiencia} · ${item.tiempo}</h4>
+                        <h4 class="impinfo">☆${item.calificacion} · ${item.evaluaciones} evaluaciones</h4> 
+                        
+                        <div class="anfi">
+                        <img src="${item.hostimg}" alt="${item.hostimg}" class="anfitrionimg">
+                        <div class="anfitrioninfo">
+                        <h4><p>Anfitrión: ${item.anfitrion}</p></h4>
+                        <h5><p>${item.experiencia} · ${item.tiempo} años de experiencia</p></h5>
+                        </div>
+                        </div>
                         <div class="caracteristicas">
                           <div class="car1">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2607/2607179.png" alt="drimg" class="carimg">
+                            <div class="cdatos">
                             <h3>${item.dato1.nombre}</h3>
                             <h4>${item.dato1.descripcion}</h4>
+                            </div>
                           </div>
                           <div class="car2">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2838/2838912.png" alt="lcimg" class="carimg">
+                            <div class="cdatos">
                             <h3>${item.dato2.nombre}</h3>
                             <h4>${item.dato2.descripcion}</h4>
+                            </div>
                           </div>
                           <div class="car3">
+                            <img src="https://cdn-icons-png.flaticon.com/128/969/969088.png" alt="mdimg" class="carimg">
+                            <div class="cdatos">
                             <h3>${item.dato3.nombre}</h3>
                             <h4>${item.dato3.descripcion}</h4>
+                            </div>
                           </div>
                           </div>
-                          <h4 class="descripcion">${item.desc}</h4> 
+                          <h4 class="informacionimp">${item.desc}</h4> 
 
                     </div>
                 </div>
@@ -247,6 +265,8 @@
         const decreaseButton = document.querySelector('.decrease');
         const increaseButton = document.querySelector('.increase');
         const reservarButton = document.querySelector('.reservar');
+        const shadowboxel = document.querySelector('.shadowbx');
+        const btn17 = document.querySelector('.button-17');
 
         let precio = filtrarPrecio(item.precio);
         let noches = parseInt(counterElement.innerText);
@@ -286,6 +306,33 @@
 
       const itemData = JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
       displayItemDetails(itemData);
+
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY > 0);
+      });
+
+      btn17.addEventListener('click', function () {
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        dropdownMenu.classList.toggle('show');
+      });
+
+
+
+
+      // window.addEventListener('scroll', function () {
+      //   const shadowboxel = document.querySelector('.shadowbx');
+      //   const footer = document.querySelector('footer');
+      //   const shadowboxTop = shadowboxel.offsetTop;
+      //   const footerTop = footer.offsetTop;
+
+      //   if (window.scrollY > shadowboxTop && window.scrollY < footerTop) {
+      //     shadowboxel.classList.add('stickybx');
+      //   } else {
+      //     shadowboxel.classList.remove('stickybx');
+      //   }
+      // });
+
     </script>
   </body>
 
