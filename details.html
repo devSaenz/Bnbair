@@ -13,10 +13,12 @@
   <header class="header">
     <div class="header__container container">
       <div class="header__container-top">
+        <a href="index.html">
         <div class="title">
-          <img src="imgs/logo.png" alt="">
-          <h1>Bnbair</h1>
+            <img src="imgs/logo.png" alt="">
+            <h1>Bnbair</h1>
         </div>
+      </a>
 
         <div class="options">
           <button class="button-17" role="button"><img src="imgs/descarga.jpeg" alt=""><img
@@ -263,6 +265,7 @@
       const increaseButton = document.querySelector('.increase');
       const reservarButton = document.querySelector('.reservar');
       const shadowboxel = document.querySelector('.shadowbx');
+      const btn17 = document.querySelector('.button-17');
 
       let precio = filtrarPrecio(item.precio);
       let noches = parseInt(counterElement.innerText);
@@ -308,7 +311,14 @@
       header.classList.toggle('sticky', window.scrollY > 0);
     });
 
+    btn17.addEventListener('click', function () {
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      dropdownMenu.classList.toggle('show');
+    });
 
+
+
+    
     // window.addEventListener('scroll', function () {
     //   const shadowboxel = document.querySelector('.shadowbx');
     //   const footer = document.querySelector('footer');
